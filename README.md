@@ -1,7 +1,6 @@
 Danish Polls
 ============
 [![MIT-license badge](https://img.shields.io/badge/License-MIT-blue.svg)][license]
-[![CSV-validation badge](http://csvlint.io/validation/540d77206373766b9d0f0000.svg?revalidate=false)][csv-validation]
 [![Download link](https://img.shields.io/badge/Download-Link-ff69b4.svg)][download]
 
 [![Opinion-poll chart][chart-img]][d3-charts]
@@ -39,7 +38,6 @@ That guide does not mention how to clean the sorry raw data you get in Google Sp
 
 [license]: https://github.com/ndarville/danish-polls/blob/master/LICENSE.md
 [download]: https://github.com/ndarville/danish-polls/archive/master.zip
-[csv-validation]: http://csvlint.io/validation/540d77206373766b9d0f0000
 [d3-charts]: https://github.com/ndarville/d3-charts
 [chart-img]: https://raw.githubusercontent.com/ndarville/danish-polls/master/chart.png
 [wiki]: https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_Danish_general_election
