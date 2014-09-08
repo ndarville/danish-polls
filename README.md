@@ -16,7 +16,7 @@ More polls can be found using [this collection of polls][collection].
 I am *still* trying to figure out how to plot a LOESS trendline in JavaScript with [science.js][science.js] to finish up my [Party Trend chart][party-trend], so *any* [help][issue] towards achieving that would be appreciated immensely.
 
 ## Spreadsheet Data ##
-As mentioned, the data was retrieved from the [wiki][wiki] with the latest Danish opinion polling—which I contributed to myself—using Google Docs. For more on how I did that, see [this guide][docs-guide].
+As mentioned, the data was retrieved from the [wiki][wiki] with the latest Danish opinion polling—which I contributed to myself—collated using various poll aggregators. The wiki data is then imported using Google Docs. For more on how I did that, see [this guide][docs-guide].
 
 That guide does not mention how to clean the sorry raw data you get in Google Spreadsheets, so here are the steps for cleaning the data, after you’ve saved it as, say, a CSV file.
 
