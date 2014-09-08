@@ -4,7 +4,7 @@ Danish Polls
 [![CSV-validation badge](http://csvlint.io/validation/540d77206373766b9d0f0000.svg?revalidate=false)][csv-validation]
 [![Download link](https://img.shields.io/badge/Download-Link-ff69b4.svg)][download]
 
-Updating the data on the [relevant wiki][wiki] is becoming a royal pain, so I might as well focus on updating the polling data here, in a CSV file, instead. This will also speed up the process of updating interactive graphics reliant on the data.
+Updating the data on the [relevant wiki][wiki] is becoming a royal pain, so I might as well update the polling data here, in a CSV file. This will also speed up the process of updating interactive graphics reliant on the data.
 
 - View the data [here][view].
 - Download the project as a compressed file [here][download].
