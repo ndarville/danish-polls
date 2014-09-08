@@ -29,6 +29,9 @@ That guide does not mention how to clean the sorry raw data you get in Google Sp
 6. Remove the line with the `EP election`.
 7. (Optional: Remove all YouGov polls.)
 
+### Sibling Projects ###
+- [Swedish Polls][swe-polls]
+
 
 [license]: https://github.com/ndarville/danish-polls/blob/master/LICENSE.md
 [download]: https://github.com/ndarville/danish-polls/archive/master.zip
@@ -42,3 +45,4 @@ That guide does not mention how to clean the sorry raw data you get in Google Sp
 [party-trend]: http://bl.ocks.org/ndarville/11094667
 [issue]: https://github.com/ndarville/d3-charts/issues/5#issuecomment-46226887
 [docs-guide]: https://github.com/ndarville/d3-charts/tree/master/_data/denmark
+[swe-polls]: https://github.com/MansMeg/SwedishPolls
