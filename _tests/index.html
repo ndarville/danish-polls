@@ -16,6 +16,7 @@
                 coalitionLeft = ["A", "B", "F", "Ø"],
                 coalitionRight = ["V", "O", "K", "I", "C"],
                 dateValue = "Date",
+                leadValue = "Lead",
                 pollValue = "Polling Firm",
                 lCoalitionValue = "Red (A+B+F+Ø)",
                 rCoalitionValue = "Blue (V+O+I+C+K)";
@@ -37,7 +38,18 @@
                     var leftSum = d3.round(coalitionSum(d, coalitionLeft), 1),
                         rightSum = d3.round(coalitionSum(d, coalitionRight), 1),
                         leftNum = d3.round(parseFloat(d[lCoalitionValue]), 1),
-                        rightNum = d3.round(parseFloat(d[rCoalitionValue]), 1);
+                        rightNum = d3.round(parseFloat(d[rCoalitionValue]), 1),
+                        leadNum = d3.round(d[leadValue], 1);
+
+                    var valueList = [];
+                    for (var key in d) {
+                        if (coalitionLeft.indexOf(key) !== -1 || coalitionRight.indexOf(key) !== -1) {
+                            valueList.push(parseFloat(d[key]));
+                        };
+                    }
+
+                    valueList = valueList.sort(d3.descending);
+                    var leadDiff = d3.round(valueList[0] - valueList[1], 1);
 
                     if (leftSum !== leftNum) {
                         coalitionErrors.push("coalitionL: " + d[dateValue] + ", " + d[pollValue] + ", " + leftSum + " vs. " + leftNum);
@@ -46,10 +58,18 @@
                     if (rightSum !== rightNum) {
                         coalitionErrors.push("coalitionR: " + d[dateValue] + ", " + d[pollValue] + ", " + rightSum + " vs. " + rightNum);
                     }
+
+                    if (leadDiff !== leadNum) {
+                        leadErrors.push(d[dateValue] + ", " + d[pollValue] + ", " + leadDiff + " vs. " + leadNum);
+                    }
                 });
 
-                // Just render this as HTML in the future
+                // // Just render this as HTML in the future
+                console.log("Coalition inconsistencies");
                 coalitionErrors.length !== 0 ? console.log(JSON.stringify(coalitionErrors, null, 2)) : console.log("No errors, congrats!");
+
+                console.log("Lead inconsistencies");
+                leadErrors.length !== 0 ? console.log(JSON.stringify(leadErrors, null, 2)) : console.log("No errors, congrats!");
             });
         </script>
     </body>
