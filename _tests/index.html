@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p>Open your browser&rsquo;s console log to see the results.</p>
+
+        <p>(Just right-click anywhere on this page and choose &ldquo;Inspect Element&rdquo;.)</p>
+        <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+        <script src="lib/d3/d3.min.js?v=3.2.8"></script>
+        <script type="text/javascript"charset="utf-8">
+            var dataset = "../data.csv",
+                coalitionLeft = ["A", "B", "F", "Ø"],
+                coalitionRight = ["V", "O", "K", "I", "C"];
+
+            coalitionSum = function(d, coalition) {
+                var votes = parseFloat(0);
+                for (var i = 0; i < coalition.length; i++) {
+                    votes += parseFloat(d[coalition[i]])
+                }
+                return votes;
+            };
+
+            d3.csv(dataset, function(error, data) {
+                coalitionErrors = [];
+
+                // Convert entry to dictionary from tuple
+                data.forEach(function(d) {
+                    var leftSum = d3.round(coalitionSum(d, coalitionLeft), 1),
+                        rightSum = d3.round(coalitionSum(d, coalitionRight), 1),
+                        leftNum = d3.round(parseFloat(d["Red (A+B+F+Ø)"]), 1),
+                        rightNum = d3.round(parseFloat(d["Blue (V+O+I+C+K)"]), 1);
+
+                    if (leftSum !== leftNum) {
+                        coalitionErrors.push("coalitionL: " + d["Date"] + ", " + d["Polling Firm"] + ", " + leftSum + " vs. " + leftNum);
+                    }
+
+                    if (rightSum !== rightNum) {
+                        coalitionErrors.push("coalitionR: " + d["Date"] + ", " + d["Polling Firm"] + ", " + rightSum + " vs. " + rightNum);
+                    }
+                });
+
+                // Just render this as HTML in the future
+                coalitionErrors.length !== 0 ? console.log(JSON.stringify(coalitionErrors, null, 2)) : console.log("No errors, congrats!");
+            });
+        </script>
+    </body>
+</html>
