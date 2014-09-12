@@ -1,6 +1,7 @@
 Polling-Firm Performance for 2011 Election
-------------------------------------------
-The Danish 2011 election was held on September 15. Here is an overview of how accurate the polling firms were.
+==========================================
+
+The Danish 2011 election (abbreviated in Danish as `fv11`) was held on September 15. Here is an overview of how accurate the polling firms were.
 
 Absolute Comparison
 -------------------
