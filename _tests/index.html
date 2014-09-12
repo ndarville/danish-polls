@@ -52,11 +52,11 @@
                     var leadDiff = d3.round(valueList[0] - valueList[1], 1);
 
                     if (leftSum !== leftNum) {
-                        coalitionErrors.push("coalitionL: " + d[dateValue] + ", " + d[pollValue] + ", " + leftSum + " vs. " + leftNum);
+                        coalitionErrors.push("L: " + d[dateValue] + ", " + d[pollValue] + ", " + leftSum + " vs. " + leftNum);
                     }
 
                     if (rightSum !== rightNum) {
-                        coalitionErrors.push("coalitionR: " + d[dateValue] + ", " + d[pollValue] + ", " + rightSum + " vs. " + rightNum);
+                        coalitionErrors.push("R: " + d[dateValue] + ", " + d[pollValue] + ", " + rightSum + " vs. " + rightNum);
                     }
 
                     if (leadDiff !== leadNum) {
