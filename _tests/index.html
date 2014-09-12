@@ -14,7 +14,11 @@
         <script type="text/javascript"charset="utf-8">
             var dataset = "../data.csv",
                 coalitionLeft = ["A", "B", "F", "Ø"],
-                coalitionRight = ["V", "O", "K", "I", "C"];
+                coalitionRight = ["V", "O", "K", "I", "C"],
+                dateValue = "Date",
+                pollValue = "Polling Firm",
+                lCoalitionValue = "Red (A+B+F+Ø)",
+                rCoalitionValue = "Blue (V+O+I+C+K)";
 
             coalitionSum = function(d, coalition) {
                 var votes = parseFloat(0);
@@ -25,21 +29,22 @@
             };
 
             d3.csv(dataset, function(error, data) {
-                coalitionErrors = [];
+                coalitionErrors = [],
+                leadErrors = [];
 
                 // Convert entry to dictionary from tuple
                 data.forEach(function(d) {
                     var leftSum = d3.round(coalitionSum(d, coalitionLeft), 1),
                         rightSum = d3.round(coalitionSum(d, coalitionRight), 1),
-                        leftNum = d3.round(parseFloat(d["Red (A+B+F+Ø)"]), 1),
-                        rightNum = d3.round(parseFloat(d["Blue (V+O+I+C+K)"]), 1);
+                        leftNum = d3.round(parseFloat(d[lCoalitionValue]), 1),
+                        rightNum = d3.round(parseFloat(d[rCoalitionValue]), 1);
 
                     if (leftSum !== leftNum) {
-                        coalitionErrors.push("coalitionL: " + d["Date"] + ", " + d["Polling Firm"] + ", " + leftSum + " vs. " + leftNum);
+                        coalitionErrors.push("coalitionL: " + d[dateValue] + ", " + d[pollValue] + ", " + leftSum + " vs. " + leftNum);
                     }
 
                     if (rightSum !== rightNum) {
-                        coalitionErrors.push("coalitionR: " + d["Date"] + ", " + d["Polling Firm"] + ", " + rightSum + " vs. " + rightNum);
+                        coalitionErrors.push("coalitionR: " + d[dateValue] + ", " + d[pollValue] + ", " + rightSum + " vs. " + rightNum);
                     }
                 });
 
