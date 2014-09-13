@@ -7,16 +7,26 @@ Danish Polls
 
 Updating the data on the [relevant wiki][wiki] is becoming a royal pain, so I might as well update the polling data here, in a CSV file. This will also speed up the process of updating interactive graphics reliant on the data.
 
-- View the data [here][view].
+- View and inspect the data [here][view].
 - Download the project as a compressed file [here][download].
 - Get the raw CSV [here][raw].
 
 More polls can be found using [this collection of polls][collection].
 
+Because manually entering data inevitably results in human errors, I have created a basic [test script][tests] that detects inconsistencies in how the individual values match calculations based on those figures. The findings of this script that have not been addressed are available in the `INCONSISTENCIES.md` file, available [here][inconsistencies].
+
 ## Displaying the Data with D3 ##
 I am *still* trying to figure out how to plot a LOESS trendline in JavaScript with [science.js][science.js] to finish up my [Party Trend chart][party-trend], so *any* [help][issue] towards achieving that would be appreciated immensely.
 
 You can see the status of the fancy chart at the top of this project page.
+
+## Additional Polling Data ##
+
+### `all-polls.csv` ###
+Polling companies like YouGov do some dreadful polling, but some people still want to use their data towards their own ends. Because of this, I have included the YouGov data in the file called [`all-polls.csv`][all-polls].
+
+### 2011-Election Data ###
+To find out more, go to [its folder][2011].
 
 ## Spreadsheet Data ##
 As mentioned, the data was retrieved from the [wiki][wiki] with the latest Danish opinion polling—which I contributed to myself—collated using various poll aggregators. The wiki data is then imported using Google Docs. For more on how I did that, see [this guide][docs-guide].
@@ -32,6 +42,9 @@ That guide does not mention how to clean the sorry raw data you get in Google Sp
 6. Remove the line with the `EP election`.
 7. (Optional: Remove all YouGov polls.)
 
+### To-Do List ###
+Visit the project’s [issue tracker][issues] to follow its status and development. There is still much to be done.
+
 ### Sibling Projects ###
 - [Swedish Polls][swe-polls]
 
@@ -44,8 +57,13 @@ That guide does not mention how to clean the sorry raw data you get in Google Sp
 [view]: https://github.com/ndarville/danish-polls/blob/master/data.csv
 [raw]: https://raw.githubusercontent.com/ndarville/danish-polls/master/data.csv
 [collection]: https://github.com/ndarville/d3-charts/tree/master/_data
+[tests]: https://github.com/ndarville/danish-polls/tree/master/_tests
+[inconsistencies]: https://github.com/ndarville/danish-polls/blob/master/INCONSISTENCIES.md
+[all-polls]: https://github.com/ndarville/danish-polls/blob/master/all-polls.csv
+[2011]: https://github.com/ndarville/danish-polls/election2011
 [science.js]: https://github.com/jasondavies/science.js/
 [party-trend]: http://bl.ocks.org/ndarville/11094667
 [issue]: https://github.com/ndarville/d3-charts/issues/5#issuecomment-46226887
 [docs-guide]: https://github.com/ndarville/d3-charts/tree/master/_data/denmark
+[issues]: https://github.com/ndarville/danish-polls/issues
 [swe-polls]: https://github.com/MansMeg/SwedishPolls

@@ -7,7 +7,7 @@ install:
   - gem install csvlint
 
 script:
-  - csvlint data.csv
+  - csvlint data.csv && csvlint all-polls.csv
 
 notifications:
   - email: false
