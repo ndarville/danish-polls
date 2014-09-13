@@ -1,6 +1,6 @@
 Data Inconsistencies
 ====================
-The current output for the error-test script.
+The current output of [the error-test script][tests].
 
 **NB:** The errors may be wrong.
 
@@ -33,3 +33,6 @@ Lead Inconsistencies
 Date      | Institute | numComputed | numWritten
 ----------|-----------|-------------|-----------
 4/24/2014 | Megafon   | 4.4         | 3.6
+
+
+[tests]: https://github.com/ndarville/danish-polls/tree/master/_tests
