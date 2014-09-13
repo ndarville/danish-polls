@@ -15,7 +15,9 @@ You can use it like this:
 4. Go to `localhost:8000/_tests/` in your favourite browser.
 5. The rest should follow from here.
 
+To see the current errors returned by the script, view [`INCONSITENCIES.md`][inconsistencies].
+
 For more behind the scenes, go [here][issue].
 
-
+[inconsistencies]: https://github.com/ndarville/danish-polls/blob/master/INCONSISTENCIES.md
 [issue]: https://github.com/ndarville/danish-polls/issues/1

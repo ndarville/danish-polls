@@ -2,7 +2,7 @@ Data Inconsistencies
 ====================
 The current output of [the error-test script][tests].
 
-**NB:** The errors may be wrong.
+**NB:** The errors may be wrong, and some errors may be due to using single-decimal data.
 
 Coalition Inconsistencies
 -------------------------
