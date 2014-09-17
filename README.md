@@ -15,7 +15,17 @@ More polls can be found using [this collection of polls][collection].
 
 Because manually entering data inevitably results in human errors, I have created a basic [test script][tests] that detects inconsistencies in how the individual values match calculations based on those figures. The findings of this script that have not been addressed are available in the `INCONSISTENCIES.md` file, available [here][inconsistencies].s
 
-## Table Legend ##
+## Understanding the Data ##
+
+### Table Excerpt ###
+
+ Polling Firm | Date      | V    | A    | O    | B   | F   | Ø   | I   | C   | K   | Lead | Red (A+B+F+Ø) | Blue (V+O+I+C+K)
+:-------------|----------:|-----:|-----:|-----:|----:|----:|----:|----:|----:|----:|-----:|--------------:|-----------------:
+ Voxmeter     | 9/14/2014 | 25.9 | 22.7 | 17.7 | 7.2 | 7.2 | 8.3 | 5.3 | 4.8 | 0.4 | 3.2  | 45.4          | 54.1
+ Gallup       | 9/11/2014 | 22.5 | 21.7 | 18.5 | 9.1 | 6.2 | 9.8 | 6.2 | 5.2 | 0.4 | 0.8  | 46.8          | 52.8
+ Wilke        |  9/7/2014 | 24.4 | 22.4 | 18.9 | 8.7 | 7.2 | 7.9 | 4.5 | 5.0 | 1.0 | 2.0  | 46.2          | 53.8
+
+### Table Legend ####
 
  Column(s)        | Description                                                          | Value Type
 :-----------------|:---------------------------------------------------------------------|:---------------------------
