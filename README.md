@@ -13,7 +13,7 @@ Updating the data on the [relevant wiki][wiki] is becoming a royal pain, so I mi
 
 More polls can be found using [this collection of polls][collection].
 
-Because manually entering data inevitably results in human errors, I have created a basic [test script][tests] that detects inconsistencies in how the individual values match calculations based on those figures. The findings of this script that have not been addressed are available in the `INCONSISTENCIES.md` file, available [here][inconsistencies].s
+Because manually entering data inevitably results in human errors, I have created a basic [test script][tests] that detects inconsistencies in how the individual values match calculations based on those figures. The findings of this script that have not been addressed are available in the `INCONSISTENCIES.md` file, available [here][inconsistencies].
 
 ## Understanding the Data ##
 
