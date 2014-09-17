@@ -13,7 +13,19 @@ Updating the data on the [relevant wiki][wiki] is becoming a royal pain, so I mi
 
 More polls can be found using [this collection of polls][collection].
 
-Because manually entering data inevitably results in human errors, I have created a basic [test script][tests] that detects inconsistencies in how the individual values match calculations based on those figures. The findings of this script that have not been addressed are available in the `INCONSISTENCIES.md` file, available [here][inconsistencies].
+Because manually entering data inevitably results in human errors, I have created a basic [test script][tests] that detects inconsistencies in how the individual values match calculations based on those figures. The findings of this script that have not been addressed are available in the `INCONSISTENCIES.md` file, available [here][inconsistencies].s
+
+## Table Legend ##
+
+ Column(s)        | Description                                                          | Value Type
+:-----------------|:---------------------------------------------------------------------|:---------------------------
+ Polling Firm     | Firm behind the opinion poll.                                        | Text
+ Date             | Date of opinion poll.                                                | Date: `MM/DD/YY`/`%m/%d/%Y`
+ V, O, I, C, K    | Parties in right (“blue”) coalition. (*Provided.*)                   | Per cent: `0.0–100.0`
+ A, B, F, Ø       | Parties in left (“red”) coalition. (*Provided.*)                     | -
+ Lead             | Difference between the two biggest parties. (*Manually calculated.*) | -
+ Red (A+B+F+Ø)    | Total of party vote share in red coalition. (*Provided.*)            | -
+ Blue (V+O+I+C+K) | Total of party vote share in blue coalition. (*Provided.*)           | -
 
 ## Displaying the Data with D3 ##
 I am *still* trying to figure out how to plot a LOESS trendline in JavaScript with [science.js][science.js] to finish up my [Party Trend chart][party-trend], so *any* [help][issue] towards achieving that would be appreciated immensely.
