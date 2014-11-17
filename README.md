@@ -1,5 +1,6 @@
 Danish Polls
 ============
+[![Build Status](https://travis-ci.org/ndarville/danish-polls.svg?branch=master)][travis]
 [![MIT-license badge](https://img.shields.io/badge/License-MIT-blue.svg)][license]
 [![Download link](https://img.shields.io/badge/Download-Link-ff69b4.svg)][download]
 
@@ -71,6 +72,7 @@ Visit the project’s [issue tracker][issues] to follow its status and developme
 - [Swedish Polls][swe-polls]
 
 
+[travis]: https://travis-ci.org/ndarville/danish-polls
 [license]: https://github.com/ndarville/danish-polls/blob/master/LICENSE.md
 [download]: https://github.com/ndarville/danish-polls/archive/master.zip
 [d3-charts]: https://github.com/ndarville/d3-charts
