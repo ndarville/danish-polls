@@ -10,4 +10,6 @@ script:
   - csvlint data.csv && csvlint all-polls.csv
 
 notifications:
-  - email: false
+  email:
+    on_success: change
+    on_failure: always
