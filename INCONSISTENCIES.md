@@ -9,6 +9,8 @@ Coalition Inconsistencies
 
 Bloc | Date       | Institute | numComputed | numWritten
 :---:|-----------:|-----------|:-----------:|:---------:
+ L   | 11/27/2014 | Megafon          | 44.0 | 44.8
+ R   | 11/27/2014 | Megafon          | 54.2 | 55.2
  R   | 7/30/2014  | Greens           | 54.8 | 53.9
  L   | 6/2/2014   | Megafon          | 50.8 | 51.5
  R   | 6/2/2014   | Megafon          | 48.6 | 48.5
