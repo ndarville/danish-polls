@@ -56,7 +56,7 @@ $ grep -v YouGov all-polls.csv > data.csv
 
 And, if needed, you can sort it with
 
-```
+```sh
 $ sort -r -n -t"," -k2.4 -k2.6 -k2.7 -k2.9 -k2.10 all-polls.csv > sorted.csv
 # And move the header back to the top afterwards
 ```
