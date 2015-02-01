@@ -20,18 +20,18 @@ Because manually entering data inevitably results in human errors, I have create
 
 ### Table Excerpt ###
 
- Polling Firm | Date      | V    | A    | O    | B   | F   | Ø   | I   | C   | K   | Lead | Red (A+B+F+Ø) | Blue (V+O+I+C+K)
-:-------------|----------:|-----:|-----:|-----:|----:|----:|----:|----:|----:|----:|-----:|--------------:|-----------------:
- Voxmeter     | 9/14/2014 | 25.9 | 22.7 | 17.7 | 7.2 | 7.2 | 8.3 | 5.3 | 4.8 | 0.4 | 3.2  | 45.4          | 54.1
- Gallup       | 9/11/2014 | 22.5 | 21.7 | 18.5 | 9.1 | 6.2 | 9.8 | 6.2 | 5.2 | 0.4 | 0.8  | 46.8          | 52.8
- Wilke        |  9/7/2014 | 24.4 | 22.4 | 18.9 | 8.7 | 7.2 | 7.9 | 4.5 | 5.0 | 1.0 | 2.0  | 46.2          | 53.8
+ Polling Firm | Date       | V    | A    | O    | B   | F   | Ø   | I   | C   | K   | Lead | Red (A+B+F+Ø) | Blue (V+O+I+C+K)
+:-------------|-----------:|-----:|-----:|-----:|----:|----:|----:|----:|----:|----:|-----:|--------------:|-----------------:
+ Voxmeter     | 2014/09/14 | 25.9 | 22.7 | 17.7 | 7.2 | 7.2 | 8.3 | 5.3 | 4.8 | 0.4 | 3.2  | 45.4          | 54.1
+ Gallup       | 2014/09/11 | 22.5 | 21.7 | 18.5 | 9.1 | 6.2 | 9.8 | 6.2 | 5.2 | 0.4 | 0.8  | 46.8          | 52.8
+ Wilke        | 2014/09/07 | 24.4 | 22.4 | 18.9 | 8.7 | 7.2 | 7.9 | 4.5 | 5.0 | 1.0 | 2.0  | 46.2          | 53.8
 
 ### Table Legend ####
 
  Column(s)        | Description                                                          | Value Type
 :-----------------|:---------------------------------------------------------------------|:----------------------------------------
  Polling Firm     | Firm behind the opinion poll.                                        | Text
- Date             | Date of opinion poll.                                                | Date: `YYYY/MM/DD`/`%Y/%m/%d`/`[ISO 8601][xkcd]`
+ Date             | Date of opinion poll.                                                | Date: `YYYY/MM/DD`/`%Y/%m/%d`/[`ISO 8601`][xkcd]
  V, O, I, C, K    | Parties in right (“blue”) coalition. (*Provided.*)                   | Per cent: `0.0–100.0`
  A, B, F, Ø       | Parties in left (“red”) coalition. (*Provided.*)                     | -
  Lead             | Difference between the two biggest parties. (*Manually calculated.*) | -
