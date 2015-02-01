@@ -29,9 +29,9 @@ Because manually entering data inevitably results in human errors, I have create
 ### Table Legend ####
 
  Column(s)        | Description                                                          | Value Type
-:-----------------|:---------------------------------------------------------------------|:---------------------------
+:-----------------|:---------------------------------------------------------------------|:----------------------------------------
  Polling Firm     | Firm behind the opinion poll.                                        | Text
- Date             | Date of opinion poll.                                                | Date: `MM/DD/YY`/`%m/%d/%Y`
+ Date             | Date of opinion poll.                                                | Date: `YYYY/MM/DD`/`%Y/%m/%d`/`[ISO 8601][xkcd]`
  V, O, I, C, K    | Parties in right (“blue”) coalition. (*Provided.*)                   | Per cent: `0.0–100.0`
  A, B, F, Ø       | Parties in left (“red”) coalition. (*Provided.*)                     | -
  Lead             | Difference between the two biggest parties. (*Manually calculated.*) | -
@@ -47,6 +47,19 @@ You can see the status of the fancy chart at the top of this project page.
 
 ### `all-polls.csv` ###
 Polling companies like YouGov do some dreadful polling, but some people still want to use their data towards their own ends. Because of this, I have included the YouGov data in the file called [`all-polls.csv`][all-polls].
+
+You convert `all-polls.csv` to `data.csv` with
+
+```sh
+$ grep -v YouGov all-polls.csv > data.csv
+```
+
+And, if needed, you can sort it with
+
+```
+$ sort -r -n -t"," -k2.4 -k2.7 -k2.6 -k2.9 -k2.10 all-polls.csv > sorted.csv
+# And move the header back to the top afterwards
+```
 
 ### 2011-Election Data ###
 To find out more, go to [its folder][2011].
@@ -85,6 +98,7 @@ Visit the project’s [issue tracker][issues] to follow its status and developme
 [inconsistencies]: https://github.com/ndarville/danish-polls/blob/master/INCONSISTENCIES.md
 [all-polls]: https://github.com/ndarville/danish-polls/blob/master/all-polls.csv
 [2011]: https://github.com/ndarville/danish-polls/election2011
+[xkcd]: https://xkcd.com/1179/
 [science.js]: https://github.com/jasondavies/science.js/
 [party-trend]: http://bl.ocks.org/ndarville/11094667
 [issue]: https://github.com/ndarville/d3-charts/issues/5#issuecomment-46226887
