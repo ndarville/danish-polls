@@ -9,36 +9,36 @@ Coalition Inconsistencies
 
 Bloc | Date       | Institute | numComputed | numWritten
 ----:|-----------:|-----------|:-----------:|:---------:
- L   | 1/28/2014  | Megafon          | 42.7 | 43.7
- R   | 1/28/2014  | Megafon          | 56.0 | 56.3
- L   | 11/27/2014 | Megafon          | 44.0 | 44.8
- R   | 11/27/2014 | Megafon          | 54.2 | 55.2
- L   | 11/27/2014 | Megafon          | 44.0 | 44.8
- R   | 11/27/2014 | Megafon          | 54.2 | 55.2
- R   | 7/30/2014  | Greens           | 54.8 | 53.9
- L   | 6/2/2014   | Megafon          | 50.8 | 51.5
- R   | 6/2/2014   | Megafon          | 48.6 | 48.5
- L   | 5/28/2014  | Megafon          | 47.9 | 48.1
- R   | 5/28/2014  | Megafon          | 51.7 | 51.9
- R   | 12/2/2013  | Voxmeter         | 52.2 | 52.1
- R   | 11/4/2013  | Voxmeter         | 52.4 | 52.6
- R   | 11/4/2013  | Greens           | 55.8 | 56.4
- R   | 10/24/2013 | Epinion          | 55.5 | 55.7
- R   | 10/20/2013 | Voxmeter         | 52.2 | 52.3
- R   | 8/29/2012  | Megafon          | 56.3 | 55.3
- R   | 9/15/2011  | Election Results | 49.7 | 49.8
- L   | 6/22/2014  | YouGov           | 42.3 | 41.1
- R   | 10/21/2014 | YouGov           | 57.9 | 58.0
- R   | 5/6/2013   | YouGov           | 60.3 | 60.2
- L   | 8/6/2012   | YouGov           | 40.8 | 42.6
- L   | 2/6/2012   | YouGov           | 44.4 | 44.5
+ L   | 2014/01/28 | Megafon          | 42.7 | 43.7
+ R   | 2014/01/28 | Megafon          | 56.0 | 56.3
+ L   | 2014/11/27 | Megafon          | 44.0 | 44.8
+ R   | 2014/11/27 | Megafon          | 54.2 | 55.2
+ L   | 2014/11/27 | Megafon          | 44.0 | 44.8
+ R   | 2014/11/27 | Megafon          | 54.2 | 55.2
+ R   | 2014/10/21 | YouGov           | 57.9 | 58.0
+ R   | 2014/07/30 | Greens           | 54.8 | 53.9
+ L   | 2014/06/22 | YouGov           | 42.3 | 41.1
+ L   | 2014/06/02 | Megafon          | 50.8 | 51.5
+ R   | 2014/06/02 | Megafon          | 48.6 | 48.5
+ L   | 2014/05/28 | Megafon          | 47.9 | 48.1
+ R   | 2014/05/28 | Megafon          | 51.7 | 51.9
+ R   | 2013/12/02 | Voxmeter         | 52.2 | 52.1
+ R   | 2013/11/04 | Voxmeter         | 52.4 | 52.6
+ R   | 2013/11/04 | Greens           | 55.8 | 56.4
+ R   | 2013/10/24 | Epinion          | 55.5 | 55.7
+ R   | 2013/10/20 | Voxmeter         | 52.2 | 52.3
+ R   | 2013/05/06 | YouGov           | 60.3 | 60.2
+ R   | 2012/08/29 | Megafon          | 56.3 | 55.3
+ L   | 2012/08/06 | YouGov           | 40.8 | 42.6
+ L   | 2012/02/06 | YouGov           | 44.4 | 44.5
+ R   | 2011/09/15 | Election Results | 49.7 | 49.8
 
 Lead Inconsistencies
 --------------------
 
-Date      | Institute | numComputed | numWritten
----------:|-----------|:-----------:|:---------:
-4/24/2014 | Megafon   | 4.4         | 3.6
+Date        | Institute | numComputed | numWritten
+-----------:|-----------|:-----------:|:---------:
+ 04/24/2014 | Megafon   | 4.4         | 3.6
 
 
 [tests]: https://github.com/ndarville/danish-polls/tree/master/_tests
