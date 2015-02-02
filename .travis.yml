@@ -7,6 +7,7 @@ install:
   - gem install csvlint
 
 script:
+  - csvlint election2011/benchmark-relative.csv && csvlint election2011/benchmark-absolute.csv
   - csvlint data.csv && csvlint all-polls.csv
 
 notifications:
