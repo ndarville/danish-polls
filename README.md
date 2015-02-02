@@ -61,6 +61,12 @@ $ sort -r -n -t"," -k2.4 -k2.6 -k2.7 -k2.9 -k2.10 all-polls.csv > sorted.csv
 # And move the header back to the top afterwards
 ```
 
+You can probably get away with a general CSV sort, since the date format conforms to the ISO 8601 standard:
+
+```sh
+$ sort -t"," -r -k2 all-polls.csv > sorted.csv
+```
+
 ### 2011-Election Data ###
 To find out more, go to [its folder][2011].
 
