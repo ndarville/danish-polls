@@ -64,8 +64,8 @@ $ sort -r -n -t"," -k2.4 -k2.6 -k2.7 -k2.9 -k2.10 all-polls.csv > sorted.csv
 ### 2011-Election Data ###
 To find out more, go to [its folder][2011].
 
-## Spreadsheet Data ##
-As mentioned, the data was retrieved from the [wiki][wiki] with the latest Danish opinion polling—which I contributed to myself—collated using various poll aggregators. The wiki data is then imported using Google Docs. For more on how I did that, see [this guide][docs-guide].
+## Getting Opinion-Polling Data from Wikis ##
+You can retrieve *some* Danish opinion-polling data from the [wiki][wiki]—as well as data from other countries. To achieve this, you can use Google Docs. For more on how I did that, see [this guide][docs-guide].
 
 That guide does not mention how to clean the sorry raw data you get in Google Spreadsheets, so here are the steps for cleaning the data, after you’ve saved it as, say, a CSV file.
 
