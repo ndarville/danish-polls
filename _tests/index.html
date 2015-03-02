@@ -22,7 +22,7 @@
                 rCoalitionValue = "Blue (V+O+I+C+K)";
 
             coalitionSum = function(d, coalition) {
-                var votes = parseFloat(0);
+                var votes = 0;
                 for (var i = 0; i < coalition.length; i++) {
                     vote = d[coalition[i]];
                     if (!isNaN(vote)) {
@@ -33,7 +33,7 @@
             };
 
             d3.csv(dataset, function(error, data) {
-                coalitionErrors = [],
+                coalitionErrors = [];
                 leadErrors = [];
 
                 // Convert entry to dictionary from tuple
@@ -48,7 +48,7 @@
                     for (var key in d) {
                         if (coalitionLeft.indexOf(key) !== -1 || coalitionRight.indexOf(key) !== -1) {
                             valueList.push(parseFloat(d[key]));
-                        };
+                        }
                     }
 
                     valueList = valueList.sort(d3.descending);
