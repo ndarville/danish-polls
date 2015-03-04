@@ -20,7 +20,7 @@ Because manually entering data inevitably results in human errors, I have create
 
 ### Table Excerpt ###
 
- Polling Firm | Date       | V    | A    | O    | B   | F   | Ø   | I   | C   | K   | X   | Lead | Red (A+B+F+Ø+X) | Blue (V+O+I+C+K)
+ Polling Firm | Date       | V    | A    | O    | B   | F   | Ø   | I   | C   | K   | Å   | Lead | Red (A+B+F+Ø+Å) | Blue (V+O+I+C+K)
 :-------------|-----------:|-----:|-----:|-----:|----:|----:|----:|----:|----:|----:|----:|-----:|----------------:|-----------------:
  Voxmeter     | 2015-03-01 | 22.3 | 23.1 | 19.6 | 7.8 | 6.9 | 8.5 | 4.8 | 5.3 | 0.3 | 1.2 | 0.8  | 47.5            | 52.3
  Epinion      | 2015-02-23 | 23.7 | 22.0 | 21.7 | 6.3 | 6.3 | 8.9 | 5.7 | 4.9 | 0.7 | -   | 1.7  | 43.5            | 56.7
@@ -33,9 +33,9 @@ Because manually entering data inevitably results in human errors, I have create
  Polling Firm     | Firm behind the opinion poll.                                        | Text
  Date             | Date of opinion poll.                                                | Date: `YYYY-MM-DD`/`%Y-%m-%d`/[`ISO 8601`][xkcd]
  V, O, I, C, K    | Parties in right (“blue”) coalition. (*Provided.*)                   | Per cent: `0.0–100.0`
- A, B, F, Ø, X    | Parties in left (“red”) coalition. (*Provided.*)                     | -
+ A, B, F, Ø, Å    | Parties in left (“red”) coalition. (*Provided.*)                     | -
  Lead             | Difference between the two biggest parties. (*Manually calculated.*) | -
- Red (A+B+F+Ø+X)  | Total of party vote share in red coalition. (*Provided.*)            | -
+ Red (A+B+F+Ø+Å)  | Total of party vote share in red coalition. (*Provided.*)            | -
  Blue (V+O+I+C+K) | Total of party vote share in blue coalition. (*Provided.*)           | -
 
 ## Displaying the Data with D3 ##
