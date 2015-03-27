@@ -9,6 +9,8 @@ Coalition Inconsistencies
 
 Bloc | Date       | Institute | numComputed | numWritten
 :---:|:----------:|-----------|:-----------:|:---------:
+ L   | 2015/03/25 | Megafon          | 45.6 | 45.2
+ R   | 2015/03/25 | Megafon          | 53.9 | 54.8
  L   | 2014/02/19 | Megafon          | 44.8 | 45.3
  R   | 2014/02/19 | Megafon          | 54.9 | 54.7
  L   | 2014/01/28 | Megafon          | 42.7 | 43.7
@@ -40,6 +42,7 @@ Lead Inconsistencies
 
 Date        | Institute | numComputed | numWritten
 -----------:|-----------|:-----------:|:---------:
+ 03/25/2015 | Megafon   | 1.6         | 1.8
  04/24/2014 | Megafon   | 4.4         | 3.6
 
 
