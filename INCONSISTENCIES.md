@@ -9,6 +9,7 @@ Coalition Inconsistencies
 
 Bloc | Date       | Institute | numComputed | numWritten
 :---:|:----------:|-----------|:-----------:|:---------:
+ L   | 2015-04-12 | Norstat          | 46.9 | 47.0
  L   | 2015-03-25 | Megafon          | 45.6 | 45.2
  R   | 2015-03-25 | Megafon          | 53.9 | 54.8
  L   | 2014-02-19 | Megafon          | 44.8 | 45.3
