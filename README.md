@@ -32,7 +32,7 @@ Because manually entering data inevitably results in human errors, I have create
 :-----------------|:---------------------------------------------------------------------|:----------------------------------------
  Polling Firm     | Firm behind the opinion poll.                                        | Text
  Date             | Date of opinion poll.                                                | Date: `YYYY-MM-DD`/`%Y-%m-%d`/[`ISO 8601`][xkcd]
- V, O, I, C, K    | Parties in right (“blue”) coalition. (*Provided.*)                   | Per cent, `0.0–100.0`, or null, `-`
+ V, O, I, C, K    | Parties in right (“blue”) coalition. (*Provided.*)                   | Per cent, `0.0–100.0`, or `-`
  A, B, F, Ø, Å    | Parties in left (“red”) coalition. (*Provided.*)                     | ibid.
  Lead             | Difference between the two biggest parties. (*Manually calculated.*) | Per cent: 0.0–100.0
  Red (A+B+F+Ø+Å)  | Total of party vote share in red coalition. (*Provided.*)            | Per cent: 0.0–100.0
