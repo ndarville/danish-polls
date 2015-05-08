@@ -32,11 +32,11 @@ Because manually entering data inevitably results in human errors, I have create
 :-----------------|:---------------------------------------------------------------------|:----------------------------------------
  Polling Firm     | Firm behind the opinion poll.                                        | Text
  Date             | Date of opinion poll.                                                | Date: `YYYY-MM-DD`/`%Y-%m-%d`/[`ISO 8601`][xkcd]
- V, O, I, C, K    | Parties in right (“blue”) coalition. (*Provided.*)                   | Per cent: `0.0–100.0`
- A, B, F, Ø, Å    | Parties in left (“red”) coalition. (*Provided.*)                     | -
- Lead             | Difference between the two biggest parties. (*Manually calculated.*) | -
- Red (A+B+F+Ø+Å)  | Total of party vote share in red coalition. (*Provided.*)            | -
- Blue (V+O+I+C+K) | Total of party vote share in blue coalition. (*Provided.*)           | -
+ V, O, I, C, K    | Parties in right (“blue”) coalition. (*Provided.*)                   | Per cent, `0.0–100.0`, or null, `-`
+ A, B, F, Ø, Å    | Parties in left (“red”) coalition. (*Provided.*)                     | ibid.
+ Lead             | Difference between the two biggest parties. (*Manually calculated.*) | Per cent: 0.0–100.0
+ Red (A+B+F+Ø+Å)  | Total of party vote share in red coalition. (*Provided.*)            | Per cent: 0.0–100.0
+ Blue (V+O+I+C+K) | Total of party vote share in blue coalition. (*Provided.*)           | Per cent: 0.0–100.0
 
 ## Displaying the Data with D3 ##
 I am *still* trying to figure out how to plot a LOESS trendline in JavaScript with [science.js][science.js] to finish up my [Party Trend chart][party-trend], so *any* [help][issue] towards achieving that would be appreciated immensely.
