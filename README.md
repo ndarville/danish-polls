@@ -38,7 +38,10 @@ Because manually entering data inevitably results in human errors, I have create
  Red (A+B+F+Ø+Å)  | Total of party vote share in red coalition. (*Provided.*)            | Per cent: 0.0–100.0
  Blue (V+O+I+C+K) | Total of party vote share in blue coalition. (*Provided.*)           | Per cent: 0.0–100.0
 
+Sometimes, the Red/Blue coalition figure is not provided. In that case, I calculate the figure it myself. Some of the provided coalition figures tend to be different than the sum of their parties, because the pollster factor in the parties failing to meet the voting threshold of 2%. I prefer to leave such post-processing outside the scope of the dataset myself for dynamic tools like D3 to compute.
+
 ## Displaying the Data with D3 ##
+
 I am *still* trying to figure out how to plot a LOESS trendline in JavaScript with [science.js][science.js] to finish up my [Party Trend chart][party-trend], so *any* [help][issue] towards achieving that would be appreciated immensely.
 
 You can see the status of the fancy chart at the top of this project page.

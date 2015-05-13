@@ -9,6 +9,8 @@ Coalition Inconsistencies
 
 Bloc | Date       | Institute | numComputed | numWritten
 :---:|:----------:|:----------|:-----------:|:---------:
+ L   | 2015-05-10 | Wilke     | 47.7 | 48.2
+ R   | 2015-05-10 | Wilke     | 52.2 | 51.8
  L   | 2015-05-12 | Epinion   | 47.7 | 47.3
  R   | 2015-05-12 | Epinion   | 52.1 | 52.7
  L   | 2015-04-30 | Megafon   | 47.4 | 48.0
