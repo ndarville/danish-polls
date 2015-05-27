@@ -9,6 +9,8 @@ Coalition Inconsistencies
 
 Bloc | Date       | Institute | numComputed | numWritten
 :---:|:----------:|:----------|:-----------:|:---------:
+ L   | 2015-05-25 | Megafon   | 47.5 | 48.0
+ R   | 2015-05-25 | Megafon   | 52.1 | 52.0
  L   | 2015-05-25 | YouGov    | 47.9 | 48.0
  L   | 2015-05-10 | Wilke     | 47.7 | 48.2
  R   | 2015-05-10 | Wilke     | 52.2 | 51.8
