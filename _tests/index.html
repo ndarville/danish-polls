@@ -21,6 +21,8 @@
                 lCoalitionValue = "Red (A+B+F+Ø+Å)",
                 rCoalitionValue = "Blue (V+O+I+C+K)";
 
+            var format = d3.format(".1f");
+
             coalitionSum = function(d, coalition) {
                 var votes = 0;
                 for (var i = 0; i < coalition.length; i++) {
@@ -38,10 +40,14 @@
 
                 // Convert entry to dictionary from tuple
                 data.forEach(function(d) {
-                    var leftSum = d3.round(coalitionSum(d, coalitionLeft), 1),
-                        rightSum = d3.round(coalitionSum(d, coalitionRight), 1),
-                        leftNum = d3.round(parseFloat(d[lCoalitionValue]), 1),
-                        rightNum = d3.round(parseFloat(d[rCoalitionValue]), 1),
+                    var leftSum   = d3.round(coalitionSum(d, coalitionLeft), 1), // fix
+                        rightSum  = d3.round(coalitionSum(d, coalitionRight), 1), // fix
+                        leftNum   = parseFloat(d[lCoalitionValue]),
+                        rightNum  = parseFloat(d[rCoalitionValue]),
+                        leftDiff  = d3.round(leftNum - leftSum, 1),
+                        rightDiff = d3.round(rightNum - rightSum, 1),
+                        lDiffPrefix = leftDiff > 0 ? "+" : "",
+                        rDiffPrefix = rightDiff > 0 ? "+" : "",
                         leadNum = d3.round(d[leadValue], 1);
 
                     var valueList = [];
@@ -55,16 +61,17 @@
                     var leadDiff = d3.round(valueList[0] - valueList[1], 1);
 
                     if (leftSum !== leftNum) {
-                        coalitionErrors.push("L: " + d[dateValue] + ", " + d[pollValue] + ", " + leftSum + " vs. " + leftNum);
+                        coalitionErrors.push("L | " + d[dateValue] + " | " + d[pollValue] + " | " + format(leftSum) + " | " + format(leftNum) + " | " + lDiffPrefix + format(leftDiff));
                     }
 
                     if (rightSum !== rightNum) {
-                        coalitionErrors.push("R: " + d[dateValue] + ", " + d[pollValue] + ", " + rightSum + " vs. " + rightNum);
+                        coalitionErrors.push("R | " + d[dateValue] + " | " + d[pollValue] + " | " + format(rightSum) + " | " + format(rightNum) + " | " + rDiffPrefix + format(rightDiff));
                     }
 
                     if (leadDiff !== leadNum) {
-                        leadErrors.push(d[dateValue] + ", " + d[pollValue] + ", " + leadDiff + " vs. " + leadNum);
+                        leadErrors.push(d[dateValue] + " | " + d[pollValue] + " | " + format(leadDiff) + " | " + format(leadNum));
                     }
+
                 });
 
                 // // Just render this as HTML in the future
