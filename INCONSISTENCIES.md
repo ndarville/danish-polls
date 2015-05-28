@@ -9,6 +9,8 @@ Coalition Inconsistencies
 
 Bloc | Date       | Institute | numComputed | numWritten | numDiff
 :---:|:----------:|:----------|:-----------:|:----------:|:-------:
+ L   | 2015-05-28 | Epinion   | 48.1 | 47.2 | -0.9
+ R   | 2015-05-28 | Epinion   | 52.0 | 52.8 | +0.8
  L   | 2015-05-27 | Epinion   | 46.7 | 46.0 | -0.7
  R   | 2015-05-27 | Epinion   | 53.2 | 54.0 | +0.8
  L   | 2015-05-27 | Megafon   | 47.3 | 48.0 | +0.7
