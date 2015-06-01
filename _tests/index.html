@@ -8,7 +8,9 @@
 
         <p><strong>NB:</strong> Any (minor) inconsistencies may be the result of relying on single-decimal values. This is why even the election result returns an error.</p>
 
-        <p>To view the test results, right-click anywhere on this page and choose &ldquo;Inspect Element&rdquo;.</p>
+        <pre id="log"></pre>
+
+        <p>To view the test results for lead, right-click anywhere on this page and choose &ldquo;Inspect Element&rdquo;.</p>
         <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
         <script src="lib/d3/d3.min.js?v=3.2.8"></script>
         <script type="text/javascript"charset="utf-8">
@@ -38,6 +40,11 @@
                 coalitionErrors = [];
                 leadErrors = [];
 
+                var header = [
+                    "Bloc | Date       | Institute | numComputed | numWritten | numDiff",
+                    ":---:|:----------:|:----------|:-----------:|:----------:|:-------:"
+                ].join("\n");
+
                 // Convert entry to dictionary from tuple
                 data.forEach(function(d) {
                     var leftSum   = d3.round(coalitionSum(d, coalitionLeft), 1), // fix
@@ -48,7 +55,19 @@
                         rightDiff = d3.round(rightNum - rightSum, 1),
                         lDiffPrefix = leftDiff > 0 ? "+" : "",
                         rDiffPrefix = rightDiff > 0 ? "+" : "",
-                        leadNum = d3.round(d[leadValue], 1);
+                        leadNum = d3.round(d[leadValue], 1),
+                        firm = d[pollValue] === "Election Results" ? "Election" : d[pollValue],
+
+                        spacer = {
+                        "Election": "  ",
+                        "Epinion": "   ",
+                        "Greens": "    ",
+                        "Megafon": "   ",
+                        "Norstat": "   ",
+                        "Voxmeter": "  ",
+                        "Wilke": "     ",
+                        "YouGov": "    "
+                    };
 
                     var valueList = [];
                     for (var key in d) {
@@ -61,11 +80,11 @@
                     var leadDiff = d3.round(valueList[0] - valueList[1], 1);
 
                     if (leftSum !== leftNum) {
-                        coalitionErrors.push("L | " + d[dateValue] + " | " + d[pollValue] + " | " + format(leftSum) + " | " + format(leftNum) + " | " + lDiffPrefix + format(leftDiff));
+                        coalitionErrors.push("L  | " + d[dateValue] + " | " + firm + spacer[firm] + "| " + format(leftSum) + " | " + format(leftNum) + " | " + lDiffPrefix + format(leftDiff));
                     }
 
                     if (rightSum !== rightNum) {
-                        coalitionErrors.push("R | " + d[dateValue] + " | " + d[pollValue] + " | " + format(rightSum) + " | " + format(rightNum) + " | " + rDiffPrefix + format(rightDiff));
+                        coalitionErrors.push("R  | " + d[dateValue] + " | " + firm + spacer[firm] + "| " + format(rightSum) + " | " + format(rightNum) + " | " + rDiffPrefix + format(rightDiff));
                     }
 
                     if (leadDiff !== leadNum) {
@@ -74,12 +93,12 @@
 
                 });
 
-                // // Just render this as HTML in the future
-                console.log("Coalition inconsistencies");
-                coalitionErrors.length !== 0 ? console.log(JSON.stringify(coalitionErrors, null, 2)) : console.log("No errors, congrats!");
+                var message = coalitionErrors.length !== 0 ? header + JSON.stringify(coalitionErrors, null, 2) : "No errors, congrats!";
 
                 console.log("Lead inconsistencies");
                 leadErrors.length !== 0 ? console.log(JSON.stringify(leadErrors, null, 2)) : console.log("No errors, congrats!");
+
+                document.getElementById("log").innerHTML = message;
             });
         </script>
     </body>
