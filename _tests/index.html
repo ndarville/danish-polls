@@ -41,8 +41,8 @@
                 leadErrors = [];
 
                 var header = [
-                    "Bloc | Date       | Institute | numComputed | numWritten | numDiff",
-                    ":---:|:----------:|:----------|:-----------:|:----------:|:-------:"
+                    " Bloc | Date       | Institute | numComputed | numWritten | numDiff",
+                    ":----:|:----------:|:----------|:-----------:|:----------:|:-------:"
                 ].join("\n");
 
                 // Convert entry to dictionary from tuple
@@ -80,11 +80,11 @@
                     var leadDiff = d3.round(valueList[0] - valueList[1], 1);
 
                     if (leftSum !== leftNum) {
-                        coalitionErrors.push("L  | " + d[dateValue] + " | " + firm + spacer[firm] + "| " + format(leftSum) + " | " + format(leftNum) + " | " + lDiffPrefix + format(leftDiff));
+                        coalitionErrors.push("L   | " + d[dateValue] + " | " + firm + spacer[firm] + "| " + format(leftSum) + " | " + format(leftNum) + " | " + lDiffPrefix + format(leftDiff));
                     }
 
                     if (rightSum !== rightNum) {
-                        coalitionErrors.push("R  | " + d[dateValue] + " | " + firm + spacer[firm] + "| " + format(rightSum) + " | " + format(rightNum) + " | " + rDiffPrefix + format(rightDiff));
+                        coalitionErrors.push("R   | " + d[dateValue] + " | " + firm + spacer[firm] + "| " + format(rightSum) + " | " + format(rightNum) + " | " + rDiffPrefix + format(rightDiff));
                     }
 
                     if (leadDiff !== leadNum) {
