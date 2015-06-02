@@ -94,6 +94,7 @@
                 });
 
                 var message = coalitionErrors.length !== 0 ? header + JSON.stringify(coalitionErrors, null, 2) : "No errors, congrats!";
+                message = message.replace(/,/g, "").replace(/\"/g, "").replace(/\[/g, "").replace(/\]/g, "");
 
                 console.log("Lead inconsistencies");
                 leadErrors.length !== 0 ? console.log(JSON.stringify(leadErrors, null, 2)) : console.log("No errors, congrats!");
