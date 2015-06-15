@@ -23,7 +23,8 @@
                 lCoalitionValue = "Red (A+B+F+Ø+Å)",
                 rCoalitionValue = "Blue (V+O+I+C+K)";
 
-            var format = d3.format(".1f");
+            var format = d3.format(".1f"),
+                round = function(d) { return d3.round(d, 1); };
 
             coalitionSum = function(d, coalition) {
                 var votes = 0;
@@ -47,15 +48,15 @@
 
                 // Convert entry to dictionary from tuple
                 data.forEach(function(d) {
-                    var leftSum   = d3.round(coalitionSum(d, coalitionLeft), 1), // fix
-                        rightSum  = d3.round(coalitionSum(d, coalitionRight), 1), // fix
+                    var leftSum   = round(coalitionSum(d, coalitionLeft)), // fix
+                        rightSum  = round(coalitionSum(d, coalitionRight)), // fix
                         leftNum   = parseFloat(d[lCoalitionValue]),
                         rightNum  = parseFloat(d[rCoalitionValue]),
-                        leftDiff  = d3.round(leftNum - leftSum, 1),
-                        rightDiff = d3.round(rightNum - rightSum, 1),
+                        leftDiff  = round(leftNum - leftSum),
+                        rightDiff = round(rightNum - rightSum),
                         lDiffPrefix = leftDiff > 0 ? "+" : "",
                         rDiffPrefix = rightDiff > 0 ? "+" : "",
-                        leadNum = d3.round(d[leadValue], 1),
+                        leadNum = round(d[leadValue]),
                         firm = d[pollValue] === "Election Results" ? "Election" : d[pollValue],
 
                         spacer = {
@@ -78,7 +79,7 @@
                     }
 
                     valueList = valueList.sort(d3.descending);
-                    var leadDiff = d3.round(valueList[0] - valueList[1], 1);
+                    var leadDiff = round(valueList[0] - valueList[1]);
 
                     if (leftSum !== leftNum) {
                         coalitionErrors.push("L   | " + d[dateValue] + " | " + firm + spacer[firm] + "| " + format(leftSum) + " | " + format(leftNum) + " | " + lDiffPrefix + format(leftDiff));
