@@ -52,8 +52,8 @@
                         rightSum  = round(coalitionSum(d, coalitionRight)), // fix
                         leftNum   = parseFloat(d[lCoalitionValue]),
                         rightNum  = parseFloat(d[rCoalitionValue]),
-                        leftDiff  = round(leftNum - leftSum),
-                        rightDiff = round(rightNum - rightSum),
+                        leftDiff  = leftNum - leftSum,
+                        rightDiff = rightNum - rightSum,
                         lDiffPrefix = leftDiff > 0 ? "+" : "",
                         rDiffPrefix = rightDiff > 0 ? "+" : "",
                         leadNum = round(d[leadValue]),
