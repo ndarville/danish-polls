@@ -92,7 +92,6 @@
                     if (leadDiff !== leadNum) {
                         leadErrors.push(d[dateValue] + " | " + d[pollValue] + " | " + format(leadDiff) + " | " + format(leadNum));
                     }
-
                 });
 
                 var message = coalitionErrors.length !== 0 ? header + JSON.stringify(coalitionErrors, null, 2) : "No errors, congrats!";
