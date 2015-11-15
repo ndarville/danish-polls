@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Danish-polls by ndarville</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Danish-polls</h1>
+      <h2 class="project-tagline">A collection of Danish opinion polls</h2>
+      <a href="https://github.com/ndarville/danish-polls" class="btn">View on GitHub</a>
+      <a href="https://github.com/ndarville/danish-polls/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ndarville/danish-polls/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="danish-polls" class="anchor" href="#danish-polls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Danish Polls</h1>
+
+<p><a href="https://travis-ci.org/ndarville/danish-polls"><img src="https://travis-ci.org/ndarville/danish-polls.svg?branch=master" alt="Build Status"></a>
+<a href="https://github.com/ndarville/danish-polls/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT-license badge"></a>
+<a href="https://github.com/ndarville/danish-polls/archive/master.zip"><img src="https://img.shields.io/badge/Download-Link-ff69b4.svg" alt="Download link"></a></p>
+
+<p><a href="https://github.com/ndarville/d3-charts"><img src="https://raw.githubusercontent.com/ndarville/danish-polls/master/chart.png" alt="Opinion-poll chart"></a></p>
+
+<p>Updating the data on the <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_Danish_general_election">relevant wiki</a> is becoming a royal pain, so I might as well update the polling data here, in a CSV file. This will also speed up the process of updating interactive graphics reliant on the data.</p>
+
+<ul>
+<li>View and inspect the data <a href="https://github.com/ndarville/danish-polls/blob/master/data.csv">here</a>.</li>
+<li>Download the project as a compressed file <a href="https://github.com/ndarville/danish-polls/archive/master.zip">here</a>.</li>
+<li>Get the raw CSV <a href="https://raw.githubusercontent.com/ndarville/danish-polls/master/data.csv">here</a>.</li>
+</ul>
+
+<p>More polls can be found using <a href="https://github.com/ndarville/d3-charts/tree/master/_data">this collection of polls</a>.</p>
+
+<p>Because manually entering data inevitably results in human errors, I have created a basic <a href="https://github.com/ndarville/danish-polls/tree/master/_tests">test script</a> that detects inconsistencies in how the individual values match calculations based on those figures. The findings of this script that have not been addressed are available in the <code>INCONSISTENCIES.md</code> file, available <a href="https://github.com/ndarville/danish-polls/blob/master/INCONSISTENCIES.md">here</a>.</p>
+
+<h2>
+<a id="understanding-the-data" class="anchor" href="#understanding-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Understanding the Data</h2>
+
+<h3>
+<a id="table-excerpt" class="anchor" href="#table-excerpt" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table Excerpt</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">Polling Firm</th>
+<th align="right">Date</th>
+<th align="right">V</th>
+<th align="right">A</th>
+<th align="right">O</th>
+<th align="right">B</th>
+<th align="right">F</th>
+<th align="right">Ø</th>
+<th align="right">I</th>
+<th align="right">C</th>
+<th align="right">K</th>
+<th align="right">Å</th>
+<th align="right"> Lead</th>
+<th align="right">Red (A+B+F+Ø+Å)</th>
+<th align="right">Blue (V+O+I+C+K)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Voxmeter</td>
+<td align="right">2015-03-01</td>
+<td align="right">22.3</td>
+<td align="right">23.1</td>
+<td align="right">19.6</td>
+<td align="right">7.8</td>
+<td align="right">6.9</td>
+<td align="right">8.5</td>
+<td align="right">4.8</td>
+<td align="right">5.3</td>
+<td align="right">0.3</td>
+<td align="right">1.2</td>
+<td align="right">0.8</td>
+<td align="right">47.5</td>
+<td align="right">52.3</td>
+</tr>
+<tr>
+<td align="left">Epinion</td>
+<td align="right">2015-02-23</td>
+<td align="right">23.7</td>
+<td align="right">22.0</td>
+<td align="right">21.7</td>
+<td align="right">6.3</td>
+<td align="right">6.3</td>
+<td align="right">8.9</td>
+<td align="right">5.7</td>
+<td align="right">4.9</td>
+<td align="right">0.7</td>
+<td align="right">-</td>
+<td align="right">1.7</td>
+<td align="right">43.5</td>
+<td align="right">56.7</td>
+</tr>
+<tr>
+<td align="left">Voxmeter</td>
+<td align="right">2015-02-22</td>
+<td align="right">23.5</td>
+<td align="right">23.7</td>
+<td align="right">18.3</td>
+<td align="right">7.7</td>
+<td align="right">7.1</td>
+<td align="right">8.8</td>
+<td align="right">6.1</td>
+<td align="right">4.2</td>
+<td align="right">0.3</td>
+<td align="right">-</td>
+<td align="right">0.2</td>
+<td align="right">47.3</td>
+<td align="right">52.4</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="table-legend" class="anchor" href="#table-legend" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table Legend</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">Column(s)</th>
+<th align="left">Description</th>
+<th align="left">Value Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Polling Firm</td>
+<td align="left">Firm behind the opinion poll.</td>
+<td align="left">Text</td>
+</tr>
+<tr>
+<td align="left">Date</td>
+<td align="left">Date of opinion poll.</td>
+<td align="left">Date: <code>YYYY-MM-DD</code>/<code>%Y-%m-%d</code>/<a href="https://xkcd.com/1179/"><code>ISO 8601</code></a>
+</td>
+</tr>
+<tr>
+<td align="left">V, O, I, C, K</td>
+<td align="left">Parties in right (“blue”) coalition. (<em>Provided.</em>)</td>
+<td align="left">Per cent, <code>0.0–100.0</code>, or <code>-</code>
+</td>
+</tr>
+<tr>
+<td align="left">A, B, F, Ø, Å</td>
+<td align="left">Parties in left (“red”) coalition. (<em>Provided.</em>)</td>
+<td align="left">Per cent, <code>0.0–100.0</code>, or <code>-</code>
+</td>
+</tr>
+<tr>
+<td align="left">Lead</td>
+<td align="left">Difference between the two biggest parties. (<em>Manually calculated.</em>)</td>
+<td align="left">Per cent: 0.0–100.0</td>
+</tr>
+<tr>
+<td align="left">Red (A+B+F+Ø+Å)</td>
+<td align="left">Total of party vote share in red coalition. (<em>Provided.</em>)</td>
+<td align="left">Per cent: 0.0–100.0</td>
+</tr>
+<tr>
+<td align="left">Blue (V+O+I+C+K)</td>
+<td align="left">Total of party vote share in blue coalition. (<em>Provided.</em>)</td>
+<td align="left">Per cent: 0.0–100.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>Sometimes, the Red/Blue coalition figure is not provided. In that case, I calculate the figure it myself. Some of the provided coalition figures tend to be different than the sum of their parties, because the pollster factor in the parties failing to meet the voting threshold of 2%. I prefer to leave such post-processing outside the scope of the dataset myself for dynamic tools like D3 to compute.</p>
+
+<h2>
+<a id="displaying-the-data-with-d3" class="anchor" href="#displaying-the-data-with-d3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Displaying the Data with D3</h2>
+
+<p>I am <em>still</em> trying to figure out how to plot a LOESS trendline in JavaScript with <a href="https://github.com/jasondavies/science.js/">science.js</a> to finish up my <a href="http://bl.ocks.org/ndarville/11094667">Party Trend chart</a>, so <em>any</em> <a href="https://github.com/ndarville/d3-charts/issues/5#issuecomment-46226887">help</a> towards achieving that would be appreciated immensely.</p>
+
+<p>You can see the status of the fancy chart at the top of this project page.</p>
+
+<h2>
+<a id="additional-polling-data" class="anchor" href="#additional-polling-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Polling Data</h2>
+
+<h3>
+<a id="all-pollscsv" class="anchor" href="#all-pollscsv" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>all-polls.csv</code>
+</h3>
+
+<p>Polling companies like YouGov do some dreadful polling, but some people still want to use their data towards their own ends. Because of this, I have included the YouGov data in the file called <a href="https://github.com/ndarville/danish-polls/blob/master/all-polls.csv"><code>all-polls.csv</code></a>.</p>
+
+<p>You convert <code>all-polls.csv</code> to <code>data.csv</code> with</p>
+
+<div class="highlight highlight-source-shell"><pre>$ grep -v YouGov all-polls.csv <span class="pl-k">&gt;</span> data.csv</pre></div>
+
+<p>And, if needed, you can sort it with</p>
+
+<div class="highlight highlight-source-shell"><pre>$ sort -r -n -t<span class="pl-s"><span class="pl-pds">"</span>,<span class="pl-pds">"</span></span> -k2.4 -k2.6 -k2.7 -k2.9 -k2.10 all-polls.csv <span class="pl-k">&gt;</span> sorted.csv
+<span class="pl-c"># And move the header back to the top afterwards</span></pre></div>
+
+<p>You can probably get away with a general CSV sort, since the date format conforms to the ISO 8601 standard:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ sort -t<span class="pl-s"><span class="pl-pds">"</span>,<span class="pl-pds">"</span></span> -r -k2 all-polls.csv <span class="pl-k">&gt;</span> sorted.csv</pre></div>
+
+<h3>
+<a id="2011-election-data" class="anchor" href="#2011-election-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>2011-Election Data</h3>
+
+<p>To find out more, go to <a href="https://github.com/ndarville/danish-polls/election2011">its folder</a>.</p>
+
+<h2>
+<a id="getting-opinion-polling-data-from-wikis" class="anchor" href="#getting-opinion-polling-data-from-wikis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Opinion-Polling Data from Wikis</h2>
+
+<p>You can retrieve <em>some</em> Danish opinion-polling data from the <a href="https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_Danish_general_election">wiki</a>—as well as data from other countries. To achieve this, you can use Google Docs. For more on how I did that, see <a href="https://github.com/ndarville/d3-charts/tree/master/_data/denmark">this guide</a>.</p>
+
+<p>That guide does not mention how to clean the sorry raw data you get in Google Spreadsheets, so here are the steps for cleaning the data, after you’ve saved it as, say, a CSV file.</p>
+
+<h3>
+<a id="cleaning-spreadsheet-data" class="anchor" href="#cleaning-spreadsheet-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cleaning Spreadsheet Data</h3>
+
+<ol>
+<li>Remove header separator (<code>,,,</code>).</li>
+<li>Put all headers on one line.</li>
+<li>Remove all footnotes (<code>[1]</code>, <code>[2]</code>, etc.).</li>
+<li>Fix the non-2014 year dates shown as 2014.</li>
+<li>Remove all year separator lines (<code>2014,,,</code>).</li>
+<li>Remove the line with the <code>EP election</code>.</li>
+<li>(Optional: Remove all YouGov polls.)</li>
+</ol>
+
+<h3>
+<a id="to-do-list" class="anchor" href="#to-do-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>To-Do List</h3>
+
+<p>Visit the project’s <a href="https://github.com/ndarville/danish-polls/issues">issue tracker</a> to follow its status and development. There is still much to be done.</p>
+
+<h3>
+<a id="sibling-projects" class="anchor" href="#sibling-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sibling Projects</h3>
+
+<ul>
+<li><a href="https://github.com/MansMeg/SwedishPolls">Swedish Polls</a></li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ndarville/danish-polls">Danish-polls</a> is maintained by <a href="https://github.com/ndarville">ndarville</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
